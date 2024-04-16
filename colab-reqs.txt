@@ -1,0 +1,4 @@
+flask-ngrok
+flask==0.12.2
+flask-cors
+llama-cpp-python
