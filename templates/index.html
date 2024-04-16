@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{bot}} Conversation</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.3.3/purify.min.js"></script>
+</head>
+<body>
+  <div class="chat-container">
+    <div class="chat-messages">
+    </div>
+    <div class="chat-input">
+      <textarea placeholder="Type your message..."></textarea>
+      <button>Send</button>
+      <div class="advanced-options-modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Advanced Options</h2>
+          <label for="url">URL:</label>
+          <input type="text" id="url" value="/chat"><br>
+          <label for="tempSlider">Temperature:</label>
+          <input type="range" min="0" max="1" step="0.1" value="0.2" id="tempSlider">
+          <span id="tempValue">0.7</span>
+        </div>
+      </div>
+      <span class="gear-icon">&#9881;</span>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
