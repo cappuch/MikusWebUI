@@ -10,6 +10,9 @@ def in_colab():
     except ImportError:
         return False
 
+#configs
+model_id="Qwen/Qwen1.5-0.5B-Chat-GGUF"
+
 
 app = Flask(__name__)
 CORS(app)
@@ -21,9 +24,9 @@ else:
 
 
 fasterllm = Llama.from_pretrained(
-    repo_id="Qwen/Qwen1.5-0.5B-Chat-GGUF",
+    repo_id=model_id,
     filename="*q2_k.gguf",
-    verbose=False
+    verbose=True
 )
 
 
@@ -56,7 +59,7 @@ def infer():
 def index():
     return render_template(
         'index.html',
-        bot='Qwen-1.5-0.5b-Chat',
+        bot=model_id,
         temp=0.2
     )
 
