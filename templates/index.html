@@ -13,6 +13,8 @@
     <div class="chat-messages">
     </div>
     <div class="chat-input">
+      <label for="upload-image" class="upload-icon">&#128206;</label>
+      <input type="file" id="upload-image" style="display: none;">
       <textarea placeholder="Type your message..."></textarea>
       <button>Send</button>
       <div class="advanced-options-modal">
@@ -21,6 +23,8 @@
           <h2>Advanced Options</h2>
           <label for="url">URL:</label>
           <input type="text" id="url" value="/chat"><br>
+          <label for="sysprompt">System Prompt:</label>
+          <input type="text" id="sysprompt" value="You are a helpful assistant. You should reply in the best manner possible."><br>
           <label for="tempSlider">Temperature:</label>
           <input type="range" min="0" max="1" step="0.1" value="0.2" id="tempSlider">
           <span id="tempValue">0.7</span>
