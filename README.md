@@ -1,1 +1,7 @@
-run infer.py. updates come and go. follow license strictly. follow the license, meaning that if you make anything using this front-end, and is not commericial, is fine. just credit me and ill be happy. tldr; dont be a dick and profit off of OS
+test branch for implementing experimental things like image handling and system prompt editing.
+
+Implementing:
+- Image Uploading
+- RAG Built-in
+- System Prompt swapping
+- Model hotswapping
