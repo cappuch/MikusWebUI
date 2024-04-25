@@ -1,6 +1,13 @@
 from llama_cpp import Llama
 from flask import Flask, request, jsonify, render_template, send_file
 from flask_cors import CORS
+import yaml
+
+with open('config.yaml', 'r') as file:
+    config_data = yaml.safe_load(file)
+
+model_id = config_data['configs']['model_id']
+model_regex = config_data['configs']['regex']
 
 #lol hacky implementation for the colab-detection
 def in_colab():
@@ -9,10 +16,6 @@ def in_colab():
         return True
     except ImportError:
         return False
-
-#configs
-model_id="Qwen/Qwen1.5-0.5B-Chat-GGUF"
-
 
 app = Flask(__name__)
 CORS(app)
@@ -25,7 +28,7 @@ else:
 
 fasterllm = Llama.from_pretrained(
     repo_id=model_id,
-    filename="*q2_k.gguf",
+    filename=model_regex,
     verbose=True
 )
 
