@@ -1,1 +1,7 @@
-run infer.py. updates come and go. follow license strictly. follow the license, meaning that if you make anything using this front-end, and is not commericial, is fine. just credit me and ill be happy. tldr; dont be a dick and profit off of OS
+`pip install -r requirements.txt`
+`python infer.py`
+
+that's it. no extra code needed. experimental tool support on the test branch.
+
+
+updates come and go. operates on a dbad license.
