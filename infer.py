@@ -20,7 +20,7 @@ def in_colab():
 app = Flask(__name__)
 CORS(app)
 if in_colab():
-    from flask_ngrok import run_with_ngrok
+    from flask_ngrok3 import run_with_ngrok
     run_with_ngrok(app)
 else:
     pass
